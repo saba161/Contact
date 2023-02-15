@@ -1,0 +1,104 @@
+@* @{ *@
+@*     ViewData["Title"] = "Contact Page"; *@
+@* } *@
+@* *@
+@* <h2>Create Contact</h2> *@
+@* *@
+@* <!DOCTYPE html> *@
+@* <html> *@
+@* <body> *@
+@* <form id="MyForm"> *@
+@*     First Name *@
+@*     <input type="text" id="fname" name="fname"/> *@
+@*     Last Name *@
+@*     <input type="text" id="lname" name="lname"/> *@
+@*     Age *@
+@*     <input type="text" id="age" name="age"/> *@
+@*     Emal *@
+@*     <input type="text" id="email" name="email"/> *@
+@*     Phone *@
+@*     <input type="text" id="phone" name="phone"/> *@
+@* *@
+@*     <button onclick="Create(); return false;">Create</button> *@
+@* </form> *@
+@* Get Contact By Id *@
+@* <input type="text" id="readContactId"> *@
+@* <button onclick="Read()">Read</button> *@
+@* *@
+@* Delete Contact By Id *@
+@* <input type="text" id="deleteContactId"> *@
+@* <button onclick="Delete()">Delete</button> *@
+@* *@
+@* <script src="js/site.js"></script> *@
+@* </body> *@
+@* </html> *@
+
+@{
+    ViewData["Title"] = "Contact Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/Index.css">
+</head>
+<body>
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Read</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Create</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <div class="group">
+                    <label for="user" class="label">First Name</label>
+                    <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Last Name</label>
+                    <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Phone</label>
+                    <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Email Addres</label>
+                    <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check" checked>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Sign In">
+                </div>
+                <div class="hr"></div>
+            </div>
+            <form id="MyForm">
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">First Name</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">Last Name</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">Phone</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Email Address</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input onclick="APIServiceFactory('XMLHttpRequest').Read(1); return false;" type="submit" class="button" value="Create Contact">
+                    </div>
+                    <div class="hr"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
